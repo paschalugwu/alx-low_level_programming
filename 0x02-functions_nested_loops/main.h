@@ -14,5 +14,6 @@ void times_table(void);    /* Prototype for times_table */
 int add(int a, int b);     /* Prototype for add */
 void print_to_98(int n);   /* Prototype for print_to_98 */
 void print_times_table(int n);  /* Prototype for print_times_table */
+void print_fibonacci(int n);  /* Prototype for print_fibonacci */
 
 #endif /* MAIN_H */
