@@ -16,5 +16,6 @@ void print_to_98(int n);   /* Prototype for print_to_98 */
 void print_times_table(int n);  /* Prototype for print_times_table */
 void print_fibonacci(int n);  /* Prototype for print_fibonacci */
 int sum_even_fibonacci(int limit);  /* Prototype for sum_even_fibonacci */
+void print_first_98_fibonacci(void);  /* Prototype for print_first_98_fibonacci */
 
 #endif /* MAIN_H */
