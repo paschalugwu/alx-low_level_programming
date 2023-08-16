@@ -13,5 +13,6 @@ void jack_bauer(void);  /* Prototype for jack_bauer */
 void times_table(void);    /* Prototype for times_table */
 int add(int a, int b);     /* Prototype for add */
 void print_to_98(int n);   /* Prototype for print_to_98 */
+void print_times_table(int n);  /* Prototype for print_times_table */
 
 #endif /* MAIN_H */
