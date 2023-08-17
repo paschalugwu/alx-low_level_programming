@@ -7,33 +7,26 @@
  */
 int main(void)
 {
+	print_fizz_buzz();
+	return (0);
+}
+void print_fizz_buzz(void)
+{
 	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			_putchar('F');
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			_putchar('F');
+			printf("Fizz");
 		else if (i % 5 == 0)
-			_putchar('B');
+			printf("Buzz");
 		else
-		{
-			int num = i;
-
-			while (num > 0)
-			{
-				_putchar(num % 10 + '0');
-				num /= 10;
-			}
-		}
-
-		if (i < 100)
-			_putchar(' ');
-
-		if (i == 100)
-			_putchar('\n');
+			printf("%d", i);
+		if (i != 100)
+			printf(" ");
+		else
+			printf("\n");
 	}
-
-	return (0);
 }
