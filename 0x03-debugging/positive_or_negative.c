@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * positive_or_negative - Prints whether a number is +, - or 0
+ * @i: The number to be checked
  *
- * Return: Always 0.
+ * Return: No return value
  */
 void positive_or_negative(int i)
 {
