@@ -1,26 +1,39 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * fizz_buzz - Prints Fizz-Buzz sequence from 1 to 100
+ * main - Entry point
+ *
+ * Return: Always 0
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-			printf("FizzBuzz");
+			_putchar('F');
 		else if (i % 3 == 0)
-			printf("Fizz");
+			_putchar('F');
 		else if (i % 5 == 0)
-			printf("Buzz");
+			_putchar('B');
 		else
-			printf("%d", i);
-		if (i != 100)
-			printf(" ");
-		else
-			printf("\n");
+		{
+			int num = i;
+
+			while (num > 0)
+			{
+				_putchar(num % 10 + '0');
+				num /= 10;
+			}
+		}
+
+		if (i < 100)
+			_putchar(' ');
+
+		if (i == 100)
+			_putchar('\n');
 	}
+
+	return (0);
 }
