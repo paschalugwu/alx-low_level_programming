@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -10,6 +11,12 @@ int main(void)
 	print_fizz_buzz();
 	return (0);
 }
+
+/**
+ * print_fizz_buzz - Prints numbers from 1 to 100 with rules
+ *
+ * Return: None
+ */
 void print_fizz_buzz(void)
 {
 	int i;
