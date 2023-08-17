@@ -18,5 +18,7 @@ void print_fizz_buzz(void);
 void print_triangle(int size);
 void print_fizz_buzz(void);
 long largest_prime_factor(long n);
+void print_number(int n);
+int _putchar(char c);
 
 #endif /* MAIN_H */
