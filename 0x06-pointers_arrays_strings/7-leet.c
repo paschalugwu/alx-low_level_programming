@@ -1,6 +1,12 @@
 /* 7-leet.c */
 #include "main.h"
 
+/**
+ * leet - Convert characters in a string to leet (1337) language.
+ * @str: The input string to be converted.
+ *
+ * Return: A pointer to the modified string.
+ */
 char *leet(char *str)
 {
 	int i, j;
