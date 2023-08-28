@@ -9,5 +9,7 @@ char *_memcpy(char *dest, char *scr, unsigned int n);
 char *_strchr(char *s, char c);
 /* Function prototype for strspn */
 unsigned int _strspn(char *s, char *accept);
+/* Function prototype for strpbrk */
+char *_strpbrk(char *s, char *accept);
 
 #endif /* MAIN_H */
