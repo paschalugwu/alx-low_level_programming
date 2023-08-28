@@ -11,5 +11,7 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 /* Function prototype for strpbrk */
 char *_strpbrk(char *s, char *accept);
+/* Function prototype for strstr */
+char *_strstr(char *haystack, char *needle);
 
 #endif /* MAIN_H */
