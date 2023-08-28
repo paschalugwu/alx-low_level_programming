@@ -7,5 +7,7 @@ char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *scr, unsigned int n);
 /* Function prototype for strchr */
 char *_strchr(char *s, char c);
+/* Function prototype for strspn */
+unsigned int _strspn(char *s, char *accept);
 
 #endif /* MAIN_H */
