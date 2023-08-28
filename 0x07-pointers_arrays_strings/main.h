@@ -16,5 +16,9 @@ char *_strstr(char *haystack, char *needle);
 /* Function prototype that prints the chessboard. */
 void print_chessboard(char (*a)[8]);
 int _putchar(char c);
+/** Function prototype that sums of
+ * the two diagonals of a square matrix of integers. 
+*/
+void print_diagsums(int *a, int size);
 
 #endif /* MAIN_H */
