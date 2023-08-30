@@ -20,6 +20,7 @@ int is_prime_number(int n);
 int check_prime(int n, int i);
 /* Prototype that returns 1 if a string is a palindrome and 0 if not. */
 int is_palindrome(char *s);
-int check_palindrome(char *start, char *end);
+int check_palindrome(char *s, int len);
+int _strlen_recursion(char *s);
 
 #endif /* MAIN_H */
