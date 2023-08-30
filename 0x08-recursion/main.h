@@ -10,5 +10,7 @@ void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
 /* Prototype that returns the factorial of a given number. */
 int factorial(int n);
+/* Prototype that returns the value of x raised to the power of y. */
+int _pow_recursion(int x, int y);
 
 #endif /* MAIN_H */
