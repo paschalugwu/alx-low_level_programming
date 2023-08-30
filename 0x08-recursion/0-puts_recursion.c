@@ -9,10 +9,9 @@ void _puts_recursion(char *s)
 {
 	if (*s == '\0') /* Base case: end of string */
 	{
-		_putchar(*s == '\n'); /* Print a new line */
+		_putchar('\n'); /* Print a new line */
 		return;
 	}
-
 	_putchar(*s); /*Print the current character */
 	_puts_recursion(s + 1); /* Call the function recursively */
 }
