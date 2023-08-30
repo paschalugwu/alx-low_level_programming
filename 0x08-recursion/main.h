@@ -18,5 +18,8 @@ int sqrt_helper(int n, int i);
 /* Prototype that returns 1 if the input integer is a prime number, otherwise return 0. */
 int is_prime_number(int n);
 int check_prime(int n, int i);
+/* Prototype that returns 1 if a string is a palindrome and 0 if not. */
+int is_palindrome(char *s);
+int check_palindrome(char *s, int len);
 
 #endif /* MAIN_H */
