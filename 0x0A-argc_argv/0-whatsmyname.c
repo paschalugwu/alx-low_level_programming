@@ -9,8 +9,8 @@
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-    /* Print the name of the program */
-    printf("%s\n", argv[0]);
+	/* Print the name of the program */
+	printf("%s\n", argv[0]);
 
-	return 0;
+	return (0);
 }
