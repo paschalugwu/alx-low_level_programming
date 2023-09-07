@@ -1,74 +1,68 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
- * main - Entry point
- * @argc: Number of command-line arguments
- * @argv: Array of command-line argument strings
- * Return: 0 on success, 98 on error
+ * mul - Multiply two positive numbers
+ * @num1: First number
+ * @num2: Second number
+ *
+ * Return: The product of num1 and num2
  */
-int main(int argc, char *argv[])
+int mul(char *num1, char *num2)
 {
-	int num1, num2, result;
+	int len1 = 0, len2 = 0, i, j, k, carry, n1, n2, sum, *result;
 
-	if (argc != 3)
+	len1 = str_len(num1);
+	len2 = str_len(num2);
+
+	result = malloc(sizeof(int) * (len1 + len2));
+	if (result == NULL)
+		exit(1);
+	for (i = 0; i < (len1 + len2); i++)
+		result[i] = 0;
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		print_error();
-		return 98;
+		carry = 0;
+		n1 = num1[i] - '0';
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			n2 = num2[j] - '0';
+			sum = (n1 * n2) + result[i + j + 1] + carry;
+			carry = sum / 10;
+			result[i + j + 1] = sum % 10;
+		}
+		if (carry > 0)
+			result[i + j + 1] += carry;
 	}
-
-	if (!is_valid_number(argv[1]) || !is_valid_number(argv[2]))
+	k = 0;
+	while (result[k] == 0 && k < (len1 + len2))
+		k++;
+	if (k < (len1 + len2))
 	{
-		print_error();
-		return 98;
+		for (; k < (len1 + len2); k++)
+			_putchar(result[k] + '0');
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-
-	result = multiply(num1, num2);
-
-	printf("%d\n", result);
-
-	return 0;
+	else
+	{
+		_putchar('0');
+	}
+	_putchar('\n');
+	free(result);
+	return (0);
 }
 
 /**
- * is_valid_number - Check if a string contains only digits
- * @str: The input string
- * Return: 1 if valid, 0 otherwise
+ * str_len - Calculate the length of a string
+ * @str: The string to calculate the length of
+ *
+ * Return: The length of the string
  */
-int is_valid_number(char *str)
+int str_len(char *str)
 {
-	int i = 0;
+	int len = 0;
 
-	while (str[i])
-	{
-		if (!isdigit(str[i]))
-			return 0;
-		i++;
-	}
+	while (str[len])
+	len++;
 
-	return 1;
-}
-
-/**
- * multiply - Multiply two integers
- * @num1: The first integer
- * @num2: The second integer
- * Return: The result of the multiplication
- */
-int multiply(int num1, int num2)
-{
-	return num1 * num2;
-}
-
-/**
- * print_error - Print "Error" followed by a new line
- */
-void print_error(void)
-{
-	printf("Error\n");
+	return (len);
 }
