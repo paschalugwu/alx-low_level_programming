@@ -1,68 +1,96 @@
+#include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <string.h>
 
 /**
  * mul - Multiply two positive numbers
  * @num1: First number
  * @num2: Second number
  *
- * Return: The product of num1 and num2
+ * Return: 0 on success, 1 on error
  */
-int mul(char *num1, char *num2)
+int _putchar(char c);
+
+int is_number(char *str)
 {
-	int len1 = 0, len2 = 0, i, j, k, carry, n1, n2, sum, *result;
+    int i = 0;
 
-	len1 = str_len(num1);
-	len2 = str_len(num2);
+    while (str[i])
+    {
+        if (str[i] < '0' || str[i] > '9')
+            return (0);
+        i++;
+    }
 
-	result = malloc(sizeof(int) * (len1 + len2));
-	if (result == NULL)
-		exit(1);
-	for (i = 0; i < (len1 + len2); i++)
-		result[i] = 0;
-	for (i = len1 - 1; i >= 0; i--)
-	{
-		carry = 0;
-		n1 = num1[i] - '0';
-		for (j = len2 - 1; j >= 0; j--)
-		{
-			n2 = num2[j] - '0';
-			sum = (n1 * n2) + result[i + j + 1] + carry;
-			carry = sum / 10;
-			result[i + j + 1] = sum % 10;
-		}
-		if (carry > 0)
-			result[i + j + 1] += carry;
-	}
-	k = 0;
-	while (result[k] == 0 && k < (len1 + len2))
-		k++;
-	if (k < (len1 + len2))
-	{
-		for (; k < (len1 + len2); k++)
-			_putchar(result[k] + '0');
-	}
-	else
-	{
-		_putchar('0');
-	}
-	_putchar('\n');
-	free(result);
-	return (0);
+    return (1);
 }
 
-/**
- * str_len - Calculate the length of a string
- * @str: The string to calculate the length of
- *
- * Return: The length of the string
- */
-int str_len(char *str)
+int mul(char *num1, char *num2)
 {
-	int len = 0;
+    /* Calculate the length of input numbers */
+    int len1 = strlen(num1);
+    int len2 = strlen(num2);
+    int i, j, k, carry, n1, n2, sum;
+    int *result = malloc(sizeof(int) * (len1 + len2));
 
-	while (str[len])
-	len++;
+    if (result == NULL)
+        exit(1);
 
-	return (len);
+    /* Initialize the result array */
+    for (i = 0; i < (len1 + len2); i++)
+        result[i] = 0;
+
+    /* Perform multiplication */
+    for (i = len1 - 1; i >= 0; i--)
+    {
+        carry = 0;
+        n1 = num1[i] - '0';
+        for (j = len2 - 1; j >= 0; j--)
+        {
+            n2 = num2[j] - '0';
+            sum = (n1 * n2) + result[i + j + 1] + carry;
+            carry = sum / 10;
+            result[i + j + 1] = sum % 10;
+        }
+        if (carry > 0)
+            result[i + j + 1] += carry;
+    }
+
+    /* Find the first non-zero digit in the result */
+    k = 0;
+    while (result[k] == 0 && k < (len1 + len2 - 1))
+        k++;
+
+    /* Print the result */
+    for (; k < (len1 + len2); k++)
+        _putchar(result[k] + '0');
+
+    _putchar('\n');
+    free(result);
+
+    return (0);
+}
+
+int main(int argc, char *argv[])
+{
+    int result;
+
+    if (argc != 3)
+    {
+        /* Print error message for incorrect argument count */
+        printf("Error\n");
+        return (1);
+    }
+
+    if (!is_number(argv[1]) || !is_number(argv[2]))
+    {
+        /* Print error message for non-numeric input */
+        printf("Error\n");
+        return (1);
+    }
+
+    result = mul(argv[1], argv[2]);
+    printf("%d\n", result);
+
+    return (0);
 }
