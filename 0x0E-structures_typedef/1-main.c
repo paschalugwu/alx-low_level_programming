@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * main - check the code
+ * main - Test the init_dog function
  *
  * Return: Always 0.
  */
