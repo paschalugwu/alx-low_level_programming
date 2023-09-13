@@ -15,4 +15,11 @@ void print_elem(int elem);
 /* Function prototype for the print_elem_hex function */
 void print_elem_hex(int elem);
 
+/* Function prototype for the int_index function */
+int int_index(int *array, int size, int (*cmp)(int));
+int is_98(int elem);
+int is_strictly_positive(int elem);
+int abs_is_98(int elem);
+
+
 #endif /* FUNCTION_POINTERS_H */
