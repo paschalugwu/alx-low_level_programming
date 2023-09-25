@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# alx-low_level_programming tasks
-=======
 # alx-low_level_programming
 
 ## This repository contains projects and assignments related to low-level programming in C.
@@ -22,4 +19,3 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o executable_name
 
 ## Contributing
 If you would like to contribute to this repository, you can fork the repository, make changes, and submit a pull request. Please make sure to follow the coding style and conventions used in the existing code.
->>>>>>> b636c4a945a8227add77ae91d141bb0fa9bae419
