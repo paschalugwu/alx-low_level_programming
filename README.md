@@ -1,21 +1,45 @@
-# alx-low_level_programming
+# ALX Low Level Programming In C
 
-## This repository contains projects and assignments related to low-level programming in C.
-Table of Contents
+## Description
 
-    Installation
-    Usage
-    Contributing
-    License
+ALX-curriculum for low-level programming
 
-## Installation
-To use the programs in this repository, you will need to have a C compiler installed on your computer. You can download a C compiler such as GCC from the official website.
+---
 
-## Usage
-Each project in this repository is contained in its own directory. To compile and run a project, navigate to the project directory and use the following commands:
+Programming in C
 
-gcc -Wall -Werror -Wextra -pedantic *.c -o executable_name
-./executable_name
+---
 
-## Contributing
-If you would like to contribute to this repository, you can fork the repository, make changes, and submit a pull request. Please make sure to follow the coding style and conventions used in the existing code.
+## Table of contents
+
+Directories | Description
+----------- | -----------
+[0x00-hello_world](./0x00-hello_world) | Introduction to the basics of C
+[0x01-variables_if_else_while](./0x01-variables_if_else_while) | Introduction to variables, if else statments and while loops in C
+[0x02-functions_nested_loops](./0x02-functions_nested_loops) | Introduction to functions and nested loops in C
+[0x03-debugging](./0x03-debugging) | Introduction to debugging in C
+[0x04-more_functions_nested_loops](./0x04-more_functions_nested_loops) | Indepth on functions and nested loops in C
+[0x05-pointers_arrays_strings](./0x05-pointers_arrays_strings) | Introduction to pointers, arrays and strings in C
+[0x06-pointers_arrays_strings](./0x06-pointers_arrays_strings) | pointers, arrays and strings in C
+[0x07-pointers_arrays_strings](./0x07-pointers_arrays_strings) | more pointers arrays and strings in C
+[0x08-recursion](./0x08-recursion) | Recursions in C
+[0x09-static_libs](./0x09-static_libraries) | Static libraries
+[0x0A-argc_argv](./0x0A-argc_argv) | Introduction to main arguments
+[0x0B-malloc_free](./0x0B-malloc_free) | Introduction to Dynamic memory allocation in C
+[0x0C-more_malloc_free](./0x0C-more_malloc_free) | Dynamic memory allocation in C indepth
+[0x0D-preprocessor](./0x0D-preprocessor) | Introduction to C language compilation
+[0x0E-structures_typedef](./0x0E-structures_typedef) | Intoduction to structures in C
+[0x0F-function_pointers](./0x0F-function_pointers) | Functions that point to other functions
+[0x10-variadic_functions](./0x10-variadic_functions) | Functions with multiple arguments
+[0x12-singly_linked_lists](./0x12-singly_linked_lists) | Data Structures: Introduction to Singly Linked Lists
+[0x13-more_singly_linked_lists](./0x13-more_singly_linked_lists) | More on Singly Linked List
+[0x14-bit_manipulation](./0x14-bit_manipulation) | Bit manipulation in C
+[0x15-file_io](./0x15-file_io) | File Operations
+[0x17-doubly_linked_lists](./0x17-doubly_linked_lists) | Data Structire: Doubly Linked Lists
+[0x18-dynamic_libraries](./0x18-dynamic_libraries) | Dynamic Libraries
+[0x1A-hash_tables](./0x1A-hash_tables) | Hash Tables
+
+## Author
+
+ Paschal Ugwu - [Paschal](https://github.com/paschalugwu)
+ 
